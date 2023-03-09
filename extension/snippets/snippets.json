@@ -1,0 +1,165 @@
+{
+  "useState": {
+    "prefix": "us",
+    "body": [
+      "const [${1:state}, set${1:state}] = useState(null)",
+      ""
+    ],
+    "description": "useState"
+    },
+
+    "useEffect": {
+      "prefix": "ue",
+      "body": [
+        "useEffect(() => {",
+        "${1}",
+        "}, [])"
+      ],
+      "description": "useEffect"
+    },
+
+    "useDispatch": {
+      "prefix": "ud",
+      "body": [
+        "import { useDispatch, useSelector } from 'react-redux'",
+        "",
+        "const count = useSelector((state) => state.counter.value)",
+        "const dispatch = useDispatch()"
+      ],
+      "description": "useDispatch"
+    },
+
+    "redux slice for counter": {
+      "prefix": "slice",
+      "body": [
+        "import { createSlice } from '@reduxjs/toolkit'",
+        "",
+        "const initialState = {",
+        "  value: 0,",
+        "}",
+        "",
+        "export const counterSlice = createSlice({",
+        "  name: 'counter',",
+        "  initialState,",
+        "  reducers: {",
+        "    increment: (state) => {",
+        "      state.value += 1",
+        "    },",
+        "    decrement: (state) => {",
+        "      state.value -= 1",
+        "    },",
+        "    incrementByAmount: (state, action) => {",
+        "      state.value += action.payload",
+        "    },",
+        "  },",
+        "})",
+        "",
+        "export const { increment, decrement, incrementByAmount } = counterSlice.actions",
+        "",
+        "export default counterSlice.reducer",
+        ""
+      ],
+      "description": "redux slice for counter"
+    },
+
+    "redux store for counter": {
+      "prefix": "store",
+      "body": [
+        "import { configureStore } from '@reduxjs/toolkit'",
+        "import counterReducer from './counterSlice'",
+        "",
+        "export default configureStore({",
+        "  reducer: {",
+        "    counter: counterReducer",
+        "  }",
+        "})"
+      ],
+      "description": "redux store for counter"
+    },
+
+    "Formatted JSON.stringify in <pre> tag": {
+      "prefix": "JSON",
+      "body": ["<pre>{JSON.stringify(products, null, 2)}</pre>"],
+      "description": "Formatted JSON.stringify in <pre> tag"
+    },
+
+      "console.log()": {
+      "prefix": "c",
+      "body": [
+        "console.log('$1', '<------This is the data😊😊😊😊😊😊😊😊😊😊😊😊')"
+      ]
+    },
+
+    "JS Arrow function": {
+      "prefix": "fn",
+      "body": [
+        "const ${1:fnName} = (params) => {",
+        "",
+        "}"
+      ],
+      "description": "JS Arrow function"
+    },
+
+    "JS Arrow function short": {
+      "prefix": "f",
+      "body": [
+        "()=>{${1}}"
+      ],
+      "description": "JS Arrow function short"
+    },
+
+    "createSlice": {
+    "prefix": "cs",
+    "body": [
+    "import { createSlice } from '@reduxjs/toolkit'",
+    "",
+    "const ${1:sliceName}Slice = createSlice({",
+    " name: '${1:sliceName}',",
+    " initialState: ${2:initialState},",
+    " reducers: {",
+    " ${3:reducerName}: (state, action) => {",
+    " ${4:/* reducer logic */}",
+    " },",
+    " },",
+    "})",
+    "",
+    "export const { ${3:reducerName} } = ${1:sliceName}Slice.actions",
+    "",
+    "export default ${1:sliceName}Slice.reducer"
+    ],
+    "description": "Redux Toolkit createSlice"
+    },
+
+  "redux slice": {
+      "prefix": "slice2",
+      "body": [
+        "import { createSlice } from '@reduxjs/toolkit'",
+        "",
+        "const initialState = {",
+        "  ${1:name}: 0,",
+        "}",
+        "",
+        "export const ${1:name}Slice = createSlice({",
+        "  name: '${1:name}',",
+        "  initialState,",
+        "  reducers: {",
+        "    increment: (state) => {",
+        "      state.${1:name} += 1",
+        "    },",
+        "    decrement: (state) => {",
+        "      state.${1:name} -= 1",
+        "    },",
+        "    incrementByAmount: (state, action) => {",
+        "      state.${1:name} += action.payload",
+        "    },",
+        "  },",
+        "})",
+        "",
+        "export const { increment, decrement, incrementByAmount } = ${1:name}Slice.actions",
+        "",
+        "export default ${1:name}Slice.reducer",
+        ""
+      ],
+      "description": "redux slice"
+  }
+}
