@@ -1,5 +1,22 @@
 {
-  "useState": {
+    "⭐️ React functional component": {
+      "prefix": "rfc",
+      "body": [
+        "import React from 'react'",
+        "",
+        "export default function ${TM_FILENAME_BASE}() {",
+        "  return (",
+        "    <div>",
+        "      <h1>${TM_FILENAME_BASE}</h1>",
+        "      ${1}",
+        "    </div>",
+        "  )",
+        "}"
+      ],
+      "description": "⭐️React functional component"
+    },
+
+    "⭐️ useState": {
     "prefix": "us",
     "body": [
       "const [${1:state}, set${1:state}] = useState(null)",
@@ -8,7 +25,7 @@
     "description": "useState"
     },
 
-    "useEffect": {
+    "⭐️ useEffect": {
       "prefix": "ue",
       "body": [
         "useEffect(() => {",
@@ -18,7 +35,7 @@
       "description": "useEffect"
     },
 
-    "React memoise component": {
+    "⭐️ React memoise component": {
       "prefix": "memo",
       "body": [
         "export default memo(${TM_FILENAME_BASE});"
@@ -26,7 +43,95 @@
       "description": "React memoise component"
     },
 
-    "useDispatch": {
+    "⭐️ FETCH-GET": {
+      "prefix": "fetch-get",
+      "body": [
+        "  let url = \"https://jsonplaceholder.typicode.com/todos/${1:**ID--remove to fetch all**}\"",
+        "  fetch(url, {",
+        "    method: \"GET\",",
+        "  })",
+        "    .then((response) => response.json())",
+        "    .then((result) => {",
+        "      console.log(result, \"Get Successful✅✅✅✅✅✅\")",
+        "    })",
+        "    .catch((error) => {",
+        "      console.log(error, \"Get Errored❌❌❌❌❌❌\")",
+        "    })"
+      ],
+      "description": "FETCH-GET"
+    },
+
+    "⭐️ FETCH-POST": {
+      "prefix": "fetch-post",
+      "body": [
+        "  let url = \"https://jsonplaceholder.typicode.com/posts\"",
+        "  let myPayloadToPost = { firstKey: \"firstValue\", secondKey: \"secondValue\" }",
+        "  fetch(url, {",
+        "    method: \"POST\",",
+        "    body: JSON.stringify(myPayloadToPost),",
+        "  })",
+        "    .then((response) => response.json())",
+        "    .then((json) => console.log(json, \"Post Successful✅✅✅✅✅✅\"))",
+        "    .catch((error) => {",
+        "      console.log(error, \"Post Errored❌❌❌❌❌❌\")",
+        "    })"
+      ],
+      "description": "FETCH-POST"
+    },
+
+    "⭐️ FETCH-PUT": {
+      "prefix": "fetch-put",
+      "body": [
+        "  let url = \"https://jsonplaceholder.typicode.com/todos/${1:**ID**}\"",
+        "  let myPayloadToPut = { firstKey: \"firstValue\", secondKey: \"secondValue\" }",
+        "  fetch(url, {",
+        "    method: \"PUT\",",
+        "    body: JSON.stringify(myPayloadToPut),",
+        "  })",
+        "    .then((response) => response.json())",
+        "    .then((json) => console.log(json, \"Put Successful✅✅✅✅✅✅\"))",
+        "    .catch((error) => {",
+        "      console.log(error, \"Put Errored❌❌❌❌❌❌\")",
+        "    })"
+      ],
+      "description": "FETCH-PUT"
+    },
+
+    "⭐️ FETCH-PATCH": {
+      "prefix": "fetch-patch",
+      "body": [
+        "  let url = \"https://jsonplaceholder.typicode.com/todos/${1:**ID**}\"",
+        "  let myPayloadToPatch = { keyToBeChanged: \"valueToBeChanged\", notRequiredIfNoChangesKey: \"notRequiredIfNoChangesKey\" }",
+        "  fetch(url, {",
+        "    method: \"PATCH\",",
+        "    body: JSON.stringify(myPayloadToPatch),",
+        "  })",
+        "    .then((response) => response.json())",
+        "    .then((json) => console.log(json, \"Patch Successful✅✅✅✅✅✅\"))",
+        "    .catch((error) => {",
+        "      console.log(error, \"Patch Errored❌❌❌❌❌❌\")",
+        "    })"
+      ],
+      "description": "FETCH-PATCH"
+    },
+
+    "⭐️ FETCH-DELETE": {
+      "prefix": "fetch-delete",
+      "body": [
+        "  let url = \"https://jsonplaceholder.typicode.com/todos/${1:**ID**}\"",
+        "  fetch(url, {",
+        "    method: \"DELETE\",",
+        "  })",
+        "    .then((response) => response.json())",
+        "    .then((json) => console.log(json, \"Delete Successful✅✅✅✅✅✅\"))",
+        "    .catch((error) => {",
+        "      console.log(error, \"Delete Errored❌❌❌❌❌❌\")",
+        "    })"
+      ],
+      "description": "FETCH-DELETE"
+    },
+
+    "⭐️ useDispatch": {
       "prefix": "ud",
       "body": [
         "import { useDispatch, useSelector } from 'react-redux'",
@@ -37,7 +142,7 @@
       "description": "useDispatch"
     },
 
-    "redux slice for counter": {
+    "⭐️ Redux slice for counter": {
       "prefix": "slice",
       "body": [
         "import { createSlice } from '@reduxjs/toolkit'",
@@ -67,10 +172,10 @@
         "export default counterSlice.reducer",
         ""
       ],
-      "description": "redux slice for counter"
+      "description": "Redux slice for counter"
     },
 
-    "redux store for counter": {
+    "⭐️ Redux store for counter": {
       "prefix": "store",
       "body": [
         "import { configureStore } from '@reduxjs/toolkit'",
@@ -82,37 +187,97 @@
         "  }",
         "})"
       ],
-      "description": "redux store for counter"
+      "description": "Redux store for counter"
     },
 
-    "Formatted JSON.stringify in <pre> tag": {
+
+    "⭐️ Formatted JSON.stringify in <pre> tag": {
       "prefix": "JSON",
-      "body": ["<pre>{JSON.stringify(products, null, 2)}</pre>"],
-      "description": "Formatted JSON.stringify in <pre> tag"
+      "body": ["<pre>{JSON.stringify(${CLIPBOARD}${1}, null, 2)}</pre>"],
+      "description": "Formatted JSON.stringify in <pre> tag, copied text"
     },
 
-      "console.log()": {
+    "⭐️ console.log()": {
       "prefix": "c",
       "body": [
-        "console.log('$1', '<------This is the data😊😊😊😊😊😊😊😊😊😊😊😊')"
-      ]
+        "console.log('${CLIPBOARD}${1}', '<------This is the data😊😊😊😊😊😊😊😊😊😊😊😊')"
+      ],
+      "description": "Console log, copied text"
     },
 
-    "JS Arrow function": {
+    "⭐️ Function definition": {
       "prefix": "fn",
       "body": [
         "const ${1:fnName} = (params) => {",
-        "",
+        "${1}",
         "}"
       ],
-      "description": "JS Arrow function"
+      "description": "Function definition"
     },
 
-    "JS Arrow function short": {
+    "⭐️ Short Arrow function": {
       "prefix": "f",
       "body": [
         "()=>{${1}}"
       ],
-      "description": "JS Arrow function short"
+      "description": "Short Arrow function"
+    },
+
+    "⭐️ React Router <Route>": {
+      "prefix": "Route",
+      "body": [
+        "<Route path='/${1:urlpathName}' element={<${2:ComponentName} />}/>"
+      ],
+      "description": "React Router <Route>"
+    },
+
+    "⭐️ React Router useParams": {
+      "prefix": "up",
+      "body": [
+        "const { id } = useParams()",
+        ""
+      ],
+      "description": "React Router useParams"
+    },
+
+    "⭐️ React Router Link": {
+      "prefix": "Link",
+      "body": [
+        "<Link to=\"/${1:name}\">${2:Name}</Link>"
+      ],
+      "description": "React Router Link"
+    },
+
+    "⭐️ React Router NavLink": {
+      "prefix": "NavLink",
+      "body": [
+        "<NavLink",
+        "  to=\"/${1:name}\"",
+        "  style={({ isActive }) => ({ color: isActive ? \"red\" : \"black\" })}",
+        ">",
+        "  ${2:Name}",
+        "</NavLink>"
+      ],
+      "description": "React Router NavLink"
+    },
+
+    "⭐️ React Router Navigate": {
+      "prefix": "Navigate",
+      "body": [
+        "<Navigate to=\"/${1}\" />"
+      ],
+      "description": "React Router Navigate"
+    },
+
+    "⭐️ React Router useNavigate": {
+      "prefix": "un",
+      "body": [
+        "const navigate = useNavigate()",
+        "",
+        "function onSubmit() {",
+        "  navigate(\"/${1}\")",
+        "}"
+      ],
+      "description": "React Router useNavigate"
     }
-}
+  }
