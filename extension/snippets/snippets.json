@@ -200,7 +200,7 @@
     "⭐️ console.log()": {
       "prefix": "c",
       "body": [
-        "console.log('${CLIPBOARD}${1}', '<------This is the data😊😊😊😊😊😊😊😊😊😊😊😊')"
+        "console.log(${CLIPBOARD}${1}, '<------This is the data😊😊😊😊😊😊😊😊😊😊😊😊')"
       ],
       "description": "Console log, copied text"
     },
@@ -279,5 +279,22 @@
         "}"
       ],
       "description": "React Router useNavigate"
+    },
+
+    "⭐️ React Router useSearchParams": {
+      "prefix": "usp",
+      "body": [
+        "const [searchParams, setSearchParams] = useSearchParams()",
+        "const q = searchParams.get('q')"
+      ],
+      "description": "⭐️ React Router useSearchParams"
+    },
+
+    "⭐️ React Router useLocation": {
+      "prefix": "ul",
+      "body": [
+        "const location = useLocation()"
+      ],
+      "description": "⭐️ React Router useLocation"
     }
   }
