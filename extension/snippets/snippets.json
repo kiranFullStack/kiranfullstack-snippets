@@ -18,6 +18,14 @@
       "description": "useEffect"
     },
 
+    "React memoise component": {
+      "prefix": "memo",
+      "body": [
+        "export default memo(${TM_FILENAME_BASE});"
+      ],
+      "description": "React memoise component"
+    },
+
     "useDispatch": {
       "prefix": "ud",
       "body": [
