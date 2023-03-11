@@ -223,6 +223,18 @@
       "description": "Short Arrow function"
     },
 
+    "⭐️ map data": {
+      "prefix": "map",
+      "body": [
+        "<>",
+        "  {${CLIPBOARD}${1}.map((item) => (",
+        "    <h1 key={item.id}>{item.id}</h1>",
+        "  ))}",
+        "</>"
+      ],
+      "description": "⭐️ map data"
+    },
+
     "⭐️ React Router <Route>": {
       "prefix": "Route",
       "body": [
