@@ -19,7 +19,7 @@
     "⭐️ useState": {
     "prefix": "us",
     "body": [
-      "const [${1:state}, set${1:state}] = useState(null)",
+      "const [${1:state}, set${1:state}] = useState(${2})",
       ""
     ],
     "description": "useState"
@@ -226,11 +226,12 @@
     "⭐️ map data": {
       "prefix": "map",
       "body": [
-        "<>",
-        "  {${CLIPBOARD}${1}.map((item) => (",
-        "    <h1 key={item.id}>{item.id}</h1>",
-        "  ))}",
-        "</>"
+        "{${CLIPBOARD}?${1}.map((item) => (",
+        "  <div key={item.id}>",
+        "    <h1>{item.id}</h1>",
+        "    <button onClick={() => alert(item.id)}>❤️</button>",
+        "  </div>",
+        "))}"
       ],
       "description": "⭐️ map data"
     },

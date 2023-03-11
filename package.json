@@ -3,7 +3,7 @@
   "displayName": "kiranFullStack snippets",
   "description": "An easy snippet extension by kiranFullstack.com",
   "publisher": "kiranfullstack",
-  "version": "0.0.5",
+  "version": "0.0.8",
   "icon": "icon.jpeg",
   "engines": {
     "vscode": "^1.76.0"
