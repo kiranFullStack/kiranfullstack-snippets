@@ -440,7 +440,7 @@
     "description": "⭐️ docker-compose.yml React"
   },
 
-  "RN Component": {
+  "⭐️ RN Component": {
     "prefix": "rnfc",
     "body": [
       "import React from 'react'",
@@ -477,6 +477,6 @@
       "})",
       ""
     ],
-    "description": "RN Component"
+    "description": "⭐️ RN Component"
   }
 }
