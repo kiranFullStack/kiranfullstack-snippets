@@ -260,14 +260,14 @@
 
   "⭐️ Formatted JSON.stringify in <pre> tag": {
     "prefix": "JSON",
-    "body": ["<pre>{JSON.stringify(${CLIPBOARD}${1}, null, 2)}</pre>"],
+    "body": ["<pre>{JSON.stringify(${1:data}, null, 2)}</pre>"],
     "description": "Formatted JSON.stringify in <pre> tag, copied text"
   },
 
   "⭐️ console.log()": {
     "prefix": "c",
     "body": [
-      "console.log(${CLIPBOARD}${1}, '<------This is the data😊😊😊😊😊😊😊😊😊😊😊😊')"
+      "console.log(${1:data}, '<------This is the data😊😊😊😊😊😊😊😊😊😊😊😊')"
     ],
     "description": "Console log, copied text"
   },
