@@ -3,7 +3,7 @@
   "displayName": "kiranFullStack snippets",
   "description": "An easy snippet extension by kiranFullstack.com",
   "publisher": "kiranfullstack",
-  "version": "0.1.8",
+  "version": "0.1.10",
   "icon": "icon.jpeg",
   "engines": {
     "vscode": "^1.76.0"
@@ -27,6 +27,14 @@
       },
       {
         "language": "javascriptreact",
+        "path": "./extension/snippets/snippets.json"
+      },
+      {
+        "language": "typescript",
+        "path": "./extension/snippets/snippets.json"
+      },
+      {
+        "language": "typescriptreact",
         "path": "./extension/snippets/snippets.json"
       }
     ]
